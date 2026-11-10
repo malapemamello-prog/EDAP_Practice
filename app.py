@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 st.set_page_config(page_title="Marks Viewer", layout="centered")
 st.title("Student Marks Viewer")
- uploaded = st.sidebar.file_uploader("Marks file (CSV)", type="csv")
+uploaded = st.sidebar.file_uploader("Marks file (CSV)", type="csv")
 if uploaded is None: st.info("Upload a marks file to start."); st.stop()
 df = pd.read_csv(uploaded)
 
